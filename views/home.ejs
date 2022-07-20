@@ -1,0 +1,22 @@
+<%- include("partials/header.ejs") -%>
+<h1>Home</h1>
+<h5>Developer's note:</h5>
+<p>
+  Welcome to this blogging site made by yours truly.
+  <br>I hope it turns out the be the platform you've been looking for to express yourself and let out all your thoughts, both good and dark.
+  <br>So try it out and write to me what you like/dislike about it.
+  Feel free to suggest additional features as well.
+  <br>Wish you the best with penning down your raving thoughts!
+  <br><br>P.S. All your posted blogs will appear here. Head over to "Compose" at the top right and write write write!
+
+ </p>
+
+<% posts.forEach(function(post){ %>
+    <h1><%=post.title %></h1>
+    <p class = "p">
+      <%= post.post %><br>
+      <a href="/posts/<%=post.title %>">Read more</a>
+    </p>
+<% }) %>
+
+<%- include("partials/footer.ejs") -%>
